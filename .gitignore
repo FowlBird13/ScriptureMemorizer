@@ -1,0 +1,16 @@
+bin/
+obj/
+*.user
+*.vs
+.vscode/
+*.exe
+*.dll
+
+# Rider/IDE files
+.idea/
+
+# Visual Studio cache files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
