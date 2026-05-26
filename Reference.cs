@@ -31,5 +31,22 @@ public class Reference
     {
         _GBverse = verse;
     }
+    public string GetBook()
+    {
+        return _GBbook;
+    }
+    public int GetChapter()
+    {
+        return _GBchapter;
+    }
+    public int GetVerse()
+    {
+        return _GBverse;
+    }
+    public string ToDisplayFormat()
+    {
+        return $"{_GBbook} {_GBchapter}:{_GBverse}";
+    }
+    
 
 }

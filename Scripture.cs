@@ -30,7 +30,18 @@ public class Scripture
     {
         return _GBwords;
     }
-
+    
+    public string ToDisplayFormat()
+    {
+        string reference = _GBreference.ToDisplayFormat();
+        string formattedScirpture = $"{reference}\n";
+        foreach(Word rawWord in _GBwords)
+        {
+            string word = rawWord.ToFormattedString();
+            formattedScirpture += word;
+        }
+        return formattedScirpture;
+    }
     public void LoadFile(string fileName)
     {
         string[] scriptureList = System.IO.File.ReadAllLines(fileName);
