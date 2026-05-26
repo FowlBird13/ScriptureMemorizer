@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 public class Program
 {
     static void Main()
-    {
+    {   
         List<Scripture> currentScriptureList = FileToScriptures("scripture.txt");
         bool playing = true;
-        while (playing) {
+        while (playing) {Display Scripture(string hiddenwords);
+            Console.clear();
+            Console.WriteLine ($"bmpOutput");
+            Console.WriteLine ("Are you still playing? Press enter to continue or type quit to quit.");
+            string _jbcontinuing = Console.ReadLine();
+            if (_jbcontinuing = "stop" || "Stop" || "STOP")
+             playing = false;
+             else playing = true;
+
             
         }
     }
@@ -49,4 +58,5 @@ public class Program
         }
         return newWords;
     }
+
 }
