@@ -7,6 +7,18 @@ public class Reference
     private int _GBverse;
     private int _GBEndVerse;
 
+    public Reference()
+    {
+        SetBook("None selected");
+        SetChapter(0);
+        SetVerse(0);
+    }
+    public Reference(string book, int chapter, int verse)
+    {
+        SetBook(book);
+        SetChapter(chapter);
+        SetVerse(verse);    
+    }
     public void SetBook(string book)
     {
         _GBbook = book;
