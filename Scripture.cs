@@ -8,10 +8,6 @@ public class Scripture
 
     public Scripture()
     {
-        SetWords([]);
-        _GBreference.SetBook("None selected");
-        _GBreference.SetChapter(0);
-        _GBreference.SetVerse(0);
     }
     public Scripture(Reference reference, List<Word> words)
     {
