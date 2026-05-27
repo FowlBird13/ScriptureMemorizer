@@ -18,27 +18,31 @@ public class Scripture
     {
         _GBreference = reference;
     }
-    public Reference GetReference()
-    {
-        return _GBreference;
-    }
     public void SetWords(List<Word> words)
     {
         _GBwords = words;
+    }
+    public Reference GetReference()
+    {
+        return _GBreference;
     }
     public List<Word> GetWords()
     {
         return _GBwords;
     }
-    
+
     public string ToDisplayFormat()
     {
+        //create a scripture passage that begins with the reference
         string reference = _GBreference.ToDisplayFormat();
         string formattedScirpture = $"{reference}\n";
+
         foreach(Word rawWord in _GBwords)
         {
+            //turn every word class into a string
             string word = rawWord.ToFormattedString();
-            formattedScirpture += word;
+            //add the string to the passage
+            formattedScirpture += word+ " ";
         }
         return formattedScirpture;
     }

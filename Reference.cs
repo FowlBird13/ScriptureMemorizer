@@ -21,12 +21,12 @@ public class Reference
         SetVerse(verse); 
         SetEndVerse(verse);   
     }
-    public Reference(string book, int chapter, int verse, int EndVerse)
+    public Reference(string book, int chapter, int verse, int endVerse)
     {
         SetBook(book);
         SetChapter(chapter);
         SetVerse(verse); 
-        SetEndVerse(EndVerse);   
+        SetEndVerse(endVerse);   
     }
     public void SetBook(string book)
     {
@@ -62,11 +62,12 @@ public class Reference
     }
     public string ToDisplayFormat()
     {
-        if (_GBEndVerse == _GBverse)
+        if (_GBEndVerse != _GBverse)
         {
-            return $"{_GBbook} {_GBchapter}:{_GBverse}";
+            return $"{_GBbook} {_GBchapter}:{_GBverse}-{_GBEndVerse}";
         }
-        return $"{_GBbook} {_GBchapter}:{_GBverse}-{_GBEndVerse}";
+        return $"{_GBbook} {_GBchapter}:{_GBverse}";
+
     }
     
 
