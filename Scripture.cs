@@ -59,8 +59,8 @@ public class Scripture
         bool bmpListHasItemsFlag = true;
         while (i < bmpIncrease && bmpListHasItemsFlag)
         {
-            Random bmpRandNum = new Random(bmpUnhidden.Count);
-            int bmpIndex = bmpRandNum.Next();
+            Random bmpRandNum = new Random();
+            int bmpIndex = bmpRandNum.Next(bmpUnhidden.Count);
             bmpUnhidden[bmpIndex].Hide();
             bmpUnhidden = bmpRemoveHiddenWords(bmpUnhidden);
             if (bmpUnhidden.Count == 0)
