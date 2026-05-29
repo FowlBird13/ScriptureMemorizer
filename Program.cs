@@ -12,16 +12,15 @@ public class Program
         bool playing = true;
         while (playing) {
             
-            Public DisplayScripture(string Hidden)
             {Console.Clear();
-            Console.WriteLine (Hidden);
+            Console.WriteLine ($"bmpOutput");
             Console.WriteLine ("Are you still playing? Press enter to continue or type quit to quit.");
             string _jbcontinuing = Console.ReadLine.ToLower();
             if (_jbcontinuing == "quit")
              playing = false;
              else playing = true;
             
-            DisplayScripture(bmpoutput);
+            
             
         }
     }}
