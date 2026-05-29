@@ -55,7 +55,6 @@ public class Scripture
             {
                 return true;
             }
-            return false;
         }
         return false;
     }
