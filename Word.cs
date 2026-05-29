@@ -14,6 +14,16 @@ public class Word
         _bmpHidden = false;
     }
 
+    public void SetHidden(bool ifhidden)
+    {
+        _bmpHidden = ifhidden;
+    }
+    // a getter for _bmpHidden
+    public bool IsHidden()
+    {
+        return _bmpHidden;
+    }
+
     /// <summary>
     /// Set the status of the word to Hidden
     /// </summary>
