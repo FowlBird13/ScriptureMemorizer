@@ -46,6 +46,19 @@ public class Scripture
         }
         return formattedScirpture;
     }
+    //it this function returns false, it means that the entire passage is hidden. end the program. 
+    public bool checkAnythingUnhidden()
+    {
+        foreach(Word word in _GBwords)
+        {
+            if (word.IsHidden() == false)
+            {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
 
     /// <summary>
     /// Increases the number of randomly hidden words within the passage by an integer amount. Returns void.
@@ -60,7 +73,7 @@ public class Scripture
         while (i < bmpIncrease && bmpListHasItemsFlag)
         {
             Random bmpRandNum = new Random();
-            int bmpIndex = bmpRandNum.Next(bmpUnhidden.Count);
+            int bmpIndex = bmpRandNum.Next(bmpUnhidden.Count-1);
             bmpUnhidden[bmpIndex].Hide();
             bmpUnhidden = bmpRemoveHiddenWords(bmpUnhidden);
             if (bmpUnhidden.Count == 0)
@@ -91,4 +104,5 @@ public class Scripture
         return bmpUnhidden;
     }
 
+ 
 }
