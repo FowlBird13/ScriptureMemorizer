@@ -11,7 +11,7 @@ public class Program
         bool playing = true;
         while (playing) {
             
-            Display Scripture(string hiddenwords);
+            Display Scripture(string bmpOutput);
             Console.Clear();
             Console.WriteLine ($"bmpOutput");
             Console.WriteLine ("Are you still playing? Press enter to continue or type quit to quit.");
