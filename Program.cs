@@ -15,8 +15,8 @@ public class Program
             {Console.Clear();
             Console.WriteLine ($"bmpOutput");
             Console.WriteLine ("Are you still playing? Press enter to continue or type quit to quit.");
-            string _jbcontinuing = Console.ReadLine.ToLower();
-            if (_jbcontinuing == "quit")
+            string _jbcontinuing = Console.ReadLine();
+            if (_jbcontinuing.ToLower() == "quit")
              playing = false;
              else playing = true;
             
