@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 
 public class Program
 {
@@ -11,18 +12,20 @@ public class Program
         bool playing = true;
         while (playing) {
             
-            Display Scripture(string bmpOutput);
-            Console.Clear();
-            Console.WriteLine ($"bmpOutput");
+            Public DisplayScripture(string Hidden)
+            {Console.Clear();
+            Console.WriteLine (Hidden);
             Console.WriteLine ("Are you still playing? Press enter to continue or type quit to quit.");
-            string _jbcontinuing = Console.ReadLine();
-            if (_jbcontinuing = "quit" || "Quit" || "QUIT")
+            string _jbcontinuing = Console.ReadLine.ToLower();
+            if (_jbcontinuing == "quit")
              playing = false;
              else playing = true;
-
+            
+            DisplayScripture(bmpoutput);
             
         }
-    }
+    }}
+    
 /// <summary>
 /// Converts a txt file into a list of scriptures
 /// </summary>
