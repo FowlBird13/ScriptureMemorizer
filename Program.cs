@@ -16,6 +16,7 @@ public class Program
 
         bool playing = true;
         while (playing) {
+            Console.Clear();
             Console.WriteLine ($"{currentScripture.ToDisplayFormat()}");
 
             Console.WriteLine ("Are you still playing? Press enter to continue or type quit to quit.");
