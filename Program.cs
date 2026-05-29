@@ -7,22 +7,34 @@ public class Program
 {
     static void Main()
     {   
-        List<Scripture> currentScriptureList = FileToScriptures("scripture.txt");
+        List<Scripture> currentScriptureList = FileToScriptures("scriptures.txt");
         
+        //randomly select a scripture from the list 
+        Random GBrnd = new Random();
+        int GBrdIndex = GBrnd.Next(0, currentScriptureList.Count -1);
+        Scripture currentScripture = currentScriptureList[GBrdIndex];
+
         bool playing = true;
         while (playing) {
-            
-            {Console.Clear();
-            Console.WriteLine ($"bmpOutput");
+            Console.WriteLine ($"{currentScripture.ToDisplayFormat()}");
+
             Console.WriteLine ("Are you still playing? Press enter to continue or type quit to quit.");
             string _jbcontinuing = Console.ReadLine();
-            if (_jbcontinuing.ToLower() == "quit")
-             playing = false;
-             else playing = true;
+
+            if (_jbcontinuing.ToLower() == "quit" || currentScripture.checkAnythingUnhidden()==false)
+            {
+                Console.WriteLine("Thanks for playing. Bye!");
+                playing = false;
+            }
+            else if (_jbcontinuing == "")
+            {
+                int howMany = GBrnd.Next(2,6);
+                currentScripture.HideRandomWords(howMany);
+            }
             
             
             
-        }
+        
     }}
     
 /// <summary>
